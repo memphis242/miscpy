@@ -1,5 +1,6 @@
 import sys
 import math
+import pyperclip  # Import the pyperclip library
 
 def print_centered_text_with_border(text, border_char, width=80):
     """
@@ -32,6 +33,8 @@ def print_centered_text_with_border(text, border_char, width=80):
         centered_text += border_char
 
     print(centered_text)
+    pyperclip.copy(centered_text)  # Copy the centered text to the clipboard
+    print("The centered text has been copied to your clipboard.")
 
 if __name__ == "__main__":
     if len(sys.argv) < 3:
